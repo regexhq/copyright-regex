@@ -1,7 +1,7 @@
 {
   "name": "copyright-regex",
-  "description": "Regex for matching a copyright statement and its parts.",
-  "version": "0.1.0",
+  "description": "Regex for matching and parsing copyright statements.",
+  "version": "1.1.1",
   "homepage": "https://github.com/regexps/copyright-regex",
   "author": {
     "name": "Jon Schlinkert",
@@ -16,7 +16,7 @@
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/regexps/copyright-regex/blob/master/LICENSE-MIT"
+    "url": "https://github.com/regexps/copyright-regex/blob/master/LICENSE"
   },
   "files": [
     "index.js"
@@ -26,12 +26,11 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*",
-    "to-double-quotes": "^1.0.0"
+    "should": "*"
   },
   "keywords": [
     "copyright",
@@ -39,6 +38,7 @@
     "expression",
     "regex",
     "regexp",
+    "parse",
     "regular",
     "year"
   ]
