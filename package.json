@@ -2,21 +2,21 @@
   "name": "copyright-regex",
   "description": "Regex for matching a copyright statement and its parts.",
   "version": "0.1.0",
-  "homepage": "https://github.com/jonschlinkert/copyright-regex",
+  "homepage": "https://github.com/regexps/copyright-regex",
   "author": {
     "name": "Jon Schlinkert",
     "url": "https://github.com/jonschlinkert"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jonschlinkert/copyright-regex.git"
+    "url": "git://github.com/regexps/copyright-regex.git"
   },
   "bugs": {
-    "url": "https://github.com/jonschlinkert/copyright-regex/issues"
+    "url": "https://github.com/regexps/copyright-regex/issues"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/jonschlinkert/copyright-regex/blob/master/LICENSE-MIT"
+    "url": "https://github.com/regexps/copyright-regex/blob/master/LICENSE-MIT"
   },
   "files": [
     "index.js"
@@ -33,5 +33,13 @@
     "should": "*",
     "to-double-quotes": "^1.0.0"
   },
-  "keywords": []
+  "keywords": [
+    "copyright",
+    "date",
+    "expression",
+    "regex",
+    "regexp",
+    "regular",
+    "year"
+  ]
 }
