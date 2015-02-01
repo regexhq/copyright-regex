@@ -35,6 +35,36 @@ describe('match groups:', function () {
     assert.equal(matches[5], 'Jon Schlinkert');
   });
 
+  it('should match a copyright statement missing a copyright symbol:', function () {
+    var matches = match('abc\nCopyright 2013-2015 Jon Schlinkert.\nxyz');
+    assert.equal(matches[0], 'Copyright 2013-2015 Jon Schlinkert');
+    assert.equal(matches[1], 'Copyright');
+    assert.equal(matches[2], null);
+    assert.equal(matches[3], '2013-2015 ');
+    assert.equal(matches[4], '2015');
+    assert.equal(matches[5], 'Jon Schlinkert');
+  });
+
+  it('should match a copyright statement missing an author:', function () {
+    var matches = match('abc\nCopyright 2013-2015\nxyz');
+    assert.equal(matches[0], 'Copyright 2013-2015');
+    assert.equal(matches[1], 'Copyright');
+    assert.equal(matches[2], null);
+    assert.equal(matches[3], '2013-2015');
+    assert.equal(matches[4], '2015');
+    assert.equal(matches[5], '');
+  });
+
+  it('should match a copyright statement missing dates:', function () {
+    var matches = match('abc\nCopyright (c) Jon Schlinkert.\nxyz');
+    assert.equal(matches[0], 'Copyright (c) Jon Schlinkert');
+    assert.equal(matches[1], 'Copyright');
+    assert.equal(matches[2], '(c)');
+    assert.equal(matches[3], '');
+    assert.equal(matches[4], null);
+    assert.equal(matches[5], 'Jon Schlinkert');
+  });
+
   // a bunch of random copyright statements from using this regex for parsing
   it('should match valid statements:', function () {
     assert.equal(re.test('(C) Copyright 2000, 2001, 2002'), true);
