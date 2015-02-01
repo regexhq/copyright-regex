@@ -8,6 +8,5 @@
 'use strict';
 
 module.exports = function copyrightRegex() {
-  return /(?:(copyright)[ \t]*(?:(&copy;|\(c\)|&#(?:169|xa9;)|©)[ \t]*)?)(?:(?:((?:19|20)[0-9]*)[\W\s]*)*([\w\s]*)*)/i;
+  return /(?!.*(?:\{|\}|\);))(?:(copyright)[ \t]*(?:(&copy;|\(c\)|&#(?:169|xa9;)|©)[ \t]+)?)(?:(?:((?:19|20)[0-9]+)[^\w]*)*([\w\s]*)*)/i;
 };
-
