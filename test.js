@@ -1,8 +1,8 @@
 /*!
- * copyright-regex <https://github.com/jonschlinkert/copyright-regex>
+ * copyright-regex <https://github.com/regexps/copyright-regex>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
+ * Copyright (c) 2015 Jon Schlinkert.
+ * Licensed under the MIT license.
  */
 
 'use strict';
@@ -20,27 +20,19 @@ describe('match groups:', function () {
     assert.equal(matches[0], 'Copyright (c) 2013, Jon Schlinkert');
     assert.equal(matches[1], 'Copyright');
     assert.equal(matches[2], '(c)');
-    assert.equal(matches[3], '2013');
-    assert.equal(matches[4], 'Jon Schlinkert');
+    assert.equal(matches[3], '2013, ');
+    assert.equal(matches[4], '2013');
+    assert.equal(matches[5], 'Jon Schlinkert');
   });
 
   it('should match a copyright statement with multiple dates:', function () {
-    var matches = match('abc\nCopyright (c) 2013-2015, Jon Schlinkert.\nxyz');
-    console.log(matches)
-    assert.equal(matches[0], 'Copyright (c) 2013-2015, Jon Schlinkert');
+    var matches = match('abc\nCopyright (c) 2013-2015, 2016, Jon Schlinkert.\nxyz');
+    assert.equal(matches[0], 'Copyright (c) 2013-2015, 2016, Jon Schlinkert');
     assert.equal(matches[1], 'Copyright');
     assert.equal(matches[2], '(c)');
-    assert.equal(matches[3], '2015');
-    assert.equal(matches[4], 'Jon Schlinkert');
-  });
-
-  it('should match a copyright statement with multiple dates:', function () {
-    var matches = match('Based on Underscore.js 1.5.2, copyright 2009-2013 Jeremy Ashkenas,');
-    assert.equal(matches[0], 'copyright 2009-2013 Jeremy Ashkenas');
-    assert.equal(matches[1], 'copyright');
-    assert.equal(matches[2], undefined);
-    assert.equal(matches[3], '2013');
-    assert.equal(matches[4], 'Jeremy Ashkenas');
+    assert.equal(matches[3], '2013-2015, 2016, ');
+    assert.equal(matches[4], '2016');
+    assert.equal(matches[5], 'Jon Schlinkert');
   });
 });
 
