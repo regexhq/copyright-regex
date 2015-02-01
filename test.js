@@ -36,6 +36,7 @@ describe('match groups:', function () {
   });
 });
 
+// a bunch of random copyright statements from using this regex for parsing
 describe('should match valid statements:', function () {
   assert.equal(re.test('(C) Copyright 2000, 2001, 2002'), true);
   assert.equal(re.test('"Copyright 2011 craigslist, inc."'), true);
