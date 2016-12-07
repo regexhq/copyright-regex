@@ -1,7 +1,7 @@
 {
   "name": "copyright-regex",
   "description": "Regex for matching and parsing copyright statements.",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "homepage": "https://github.com/regexhq/copyright-regex",
   "author": "Jon Schlinkert (https://github.com/regexhq)",
   "repository": "regexhq/copyright-regex",
