@@ -7,6 +7,7 @@
 
 'use strict';
 
+require('mocha');
 var assert = require('assert');
 var re = require('./')();
 

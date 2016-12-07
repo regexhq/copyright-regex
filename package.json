@@ -2,17 +2,11 @@
   "name": "copyright-regex",
   "description": "Regex for matching and parsing copyright statements.",
   "version": "1.1.5",
-  "homepage": "https://github.com/regexps/copyright-regex",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/regexps/copyright-regex.git"
-  },
+  "homepage": "https://github.com/regexhq/copyright-regex",
+  "author": "Jon Schlinkert (https://github.com/regexhq)",
+  "repository": "regexhq/copyright-regex",
   "bugs": {
-    "url": "https://github.com/regexps/copyright-regex/issues"
+    "url": "https://github.com/regexhq/copyright-regex/issues"
   },
   "license": "MIT",
   "files": [
@@ -26,15 +20,15 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "^3.2.0"
   },
   "keywords": [
     "copyright",
     "date",
     "expression",
+    "parse",
     "regex",
     "regexp",
-    "parse",
     "regular",
     "year"
   ]
